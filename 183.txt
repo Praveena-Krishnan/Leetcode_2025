@@ -1,0 +1,58 @@
+LeetCode Problem 183: Customers Who Never Order
+
+Table: Customers
++-------------+---------+
+| Column Name | Type    |
++-------------+---------+
+| id          | int     |
+| name        | varchar |
++-------------+---------+
+id is the primary key for this table.
+
+Table: Orders
++-------------+------+
+| Column Name | Type |
++-------------+------+
+| id          | int  |
+| customerId  | int  |
++-------------+------+
+id is the primary key for this table.
+customerId is a foreign key to Customers.id.
+
+Write an SQL query to report all customers who never placed any orders.
+
+Return the result table in any order.
+
+Example:
+Customers table:
++----+-------+
+| id | name  |
++----+-------+
+| 1  | Joe   |
+| 2  | Henry |
+| 3  | Sam   |
+| 4  | Max   |
++----+-------+
+
+Orders table:
++----+------------+
+| id | customerId |
++----+------------+
+| 1  | 3          |
+| 2  | 1          |
++----+------------+
+
+Result table:
++-----------+
+| Customers |
++-----------+
+| Henry     |
+| Max       |
++-----------+
+
+
+
+SELECT name AS Customers
+FROM Customers
+LEFT JOIN Orders ON Customers.id = Orders.customerId
+WHERE Orders.customerId IS NULL;
