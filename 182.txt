@@ -1,0 +1,35 @@
+/*
+LeetCode Problem 182: Duplicate Emails
+
+This SQL query finds all duplicate email addresses in a table named 'Person'.
+Each record in the 'Person' table contains an 'Id' and an 'Email'.
+The query returns a list of email addresses that appear more than once in the table.
+
+Columns:
+- Email: The email address that appears multiple times.
+
+Approach:
+- Group the records by the 'Email' field.
+- Use the HAVING clause to filter groups with a count greater than one.
+- Select only the 'Email' field for output.
+
+Example:
+Input:
++----+---------+
+| Id | Email   |
++----+---------+
+| 1  | a@b.com |
+| 2  | c@d.com |
+| 3  | a@b.com |
++----+---------+
+
+Output:
++---------+
+| Email   |
++---------+
+| a@b.com |
++---------+
+*/
+
+# Write your MySQL query statement below
+select email from Person Group by email having count(email)>1;
