@@ -1,0 +1,37 @@
+"""
+LeetCode Problem 1527: Patients With a Condition
+
+Given a table 'Patients' with columns 'patient_id', 'patient_name', and 'conditions', 
+write an SQL query to report the patient_id, patient_name, and conditions for patients 
+who have a condition that is classified as 'DIAB1' (diabetes). The 'conditions' column 
+contains a space-separated list of conditions for each patient.
+
+A patient is considered to have diabetes if 'DIAB1' exists as a whole word in the 
+'conditions' column (not as a substring of another word).
+
+Return the result table in any order.
+
+Example:
+Input:
+Patients table:
++------------+--------------+--------------+
+| patient_id | patient_name | conditions   |
++------------+--------------+--------------+
+| 1          | Daniel       | YFEV COUGH   |
+| 2          | Alice        |              |
+| 3          | Bob          | DIAB100      |
+| 4          | George       | ACNE DIAB1   |
+| 5          | Alain        | DIAB1        |
++------------+--------------+--------------+
+
+Output:
++------------+--------------+--------------+
+| patient_id | patient_name | conditions   |
++------------+--------------+--------------+
+| 4          | George       | ACNE DIAB1   |
+| 5          | Alain        | DIAB1        |
++------------+--------------+--------------+
+"""
+
+# Write your MySQL query statement below
+select * from Patients where conditions like "DIAB1%" or conditions like "% DIAB1%" ;
