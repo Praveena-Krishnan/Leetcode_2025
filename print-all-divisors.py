@@ -12,4 +12,4 @@ def print_all_divisors(n: int) -> list[int]:
     return ans
 
 if __name__=="__main__":
-    print(print_all_divisors(10))  # Output: [1, 2,
+    print(print_all_divisors(10))  # Output: [1, 2,5, 10]
