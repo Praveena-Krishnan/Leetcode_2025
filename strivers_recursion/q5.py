@@ -3,7 +3,7 @@ Problem Statement: Given a positive integer N, write a recursive function
 to calculate the sum of the first N natural numbers."""
 
 def sum_n(n)-> int:
-    sum=0
+    
     if n==0:
         return 0
     else:
