@@ -5,7 +5,10 @@ NOTE: Elements in the union should be in ascending order."""
 nums1 = [1, 2, 3, 4, 5]
 nums2 = [1, 2, 7]
 
-nums1 = set(nums1)
-nums2 = set(nums2)
+# nums1 = set(nums1)
+# nums2 = set(nums2)
 
-print("Union of two arrays:", sorted(nums1.union(nums2)))  # Output: Union of two arrays: [1, 2, 3, 4, 5, 7]
+# print("Union of two arrays:", sorted(nums1.union(nums2)))  # Output: Union of two arrays: [1, 2, 3, 4, 5, 7]
+
+new_nums= set(nums1 + nums2)
+print("Union of two arrays:",new_nums)  # Output: Union of two arrays: [1, 2, 3, 4, 5, 7]
