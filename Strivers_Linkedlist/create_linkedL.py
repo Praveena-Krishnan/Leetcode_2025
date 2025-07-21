@@ -55,6 +55,22 @@ class LinkedList:
         while current_node.next and current_node.next.next:
             current_node=current_node.next
         current_node.next=None
+        
+    def delete_index(self,index):
+        if index==0:
+            self.head.next=None
+            return
+        count=0
+        current_node=self.head
+        while current_node and count+1!=index:
+            count+=1
+            current_node=current_node.next
+        if current_node is None or current_node.next is None:
+            print("Index out of bounds")
+        else:
+            current_node.next=current_node.next.next
+            
+            
             
         
     
@@ -71,6 +87,7 @@ llist.insert_end(2)
 llist.insert_end(3)
 llist.insert_end(4)
 llist.insert_index(5,3)
+llist.delete_index(3)
 llist.delete_beg()
 llist.delete_end()
 llist.print_list()
