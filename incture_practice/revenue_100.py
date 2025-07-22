@@ -6,6 +6,17 @@
 # t_rev=rev-((weeks*2)*100)
 # print("Total revenue is", t_rev)
 
+"""You are given an integer n representing the
+number of days. Revenue starts at 100 on
+Sunday and increases by 100 for each
+subsequent day, but Friday and Saturday
+always have a revenue of 0. Calculate the
+total revenue over n days.
+Input: An integer n.
+Output: An integer representing the total
+revenue.
+"""
+
 def total_revenue(n):
     total = 0
     for day in range(n):
