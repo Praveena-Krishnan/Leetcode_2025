@@ -11,9 +11,9 @@ high=n-1
 x=8
 while low<=high:
     mid=(low+high)//2
-    if arr[mid]<x:
-        low=mid+1
-    else:
+    if arr[mid]>=x:
         ans=mid
         high=mid-1
+    else:
+        low=mid+1
 print("Lower bound of", x, "is at index:", ans)
