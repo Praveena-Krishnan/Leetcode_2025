@@ -2,8 +2,8 @@
 
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
-        n=len(matrix)
-        m=len(matrix[0])
+        n=len(matrix)#row
+        m=len(matrix[0])#column
         left=0
         right=m-1
         top=0
