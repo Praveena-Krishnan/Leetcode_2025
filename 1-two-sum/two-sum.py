@@ -13,9 +13,9 @@ class Solution:
         for i in range(n):
             complement=target-nums[i]
             if complement in nummap:
-                return [nummap[complement],i]
+                return(nummap[complement],i)
             nummap[nums[i]]=i
-        return []
+        
 
         
 
